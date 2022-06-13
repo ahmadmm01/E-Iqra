@@ -7,6 +7,7 @@
     android:background="#c4c4c4"
     tools:context=".TeacherLoginActivity">
 
+
     <ImageView
         android:id="@+id/imageView_TeacherLogo"
         android:layout_width="300dp"
@@ -17,53 +18,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1"
-        app:srcCompat="@drawable/teacher" />
+        app:srcCompat="@drawable/teacher_logo" />
 
     <EditText
         android:id="@+id/editText_TeacherID"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/textview_background"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Teacher ID"
         android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView_TeacherID"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_TeacherID"
         app:layout_constraintTop_toBottomOf="@+id/textView_TeacherID"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <EditText
         android:id="@+id/editText_TeacherPassword"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/textview_background"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText_TeacherID"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText_TeacherID"
         app:layout_constraintTop_toBottomOf="@+id/textView_TeacherPassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/textView_TeacherID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Teacher ID"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView_TeacherLogo"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_TeacherLogo"
         app:layout_constraintTop_toBottomOf="@+id/imageView_TeacherLogo"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.10" />
 
     <TextView
         android:id="@+id/textView_TeacherPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView_TeacherID"
         app:layout_constraintHorizontal_bias="0.0"
@@ -75,7 +90,10 @@
         android:id="@+id/button_TeacherLogin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
         android:text="Login"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView_TeacherLogo"
         app:layout_constraintStart_toStartOf="@+id/imageView_TeacherLogo"

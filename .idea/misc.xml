@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/drawable-v24/button_background.xml" value="0.328" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/drawable-v24/textview_background.xml" value="0.328" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.328" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.328" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_pre_login.xml" value="0.33" />
-        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_student_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_student_login.xml" value="0.33" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_teacher_login.xml" value="0.33" />
       </map>
     </option>

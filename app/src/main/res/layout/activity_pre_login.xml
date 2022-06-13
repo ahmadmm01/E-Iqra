@@ -8,7 +8,7 @@
     tools:context=".PreLoginActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_AppLogo"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:contentDescription="@string/app_logo"
@@ -18,14 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1"
-        app:srcCompat="@drawable/ic_baseline_account_box_24" />
+        app:srcCompat="@drawable/app_logo" />
 
     <Button
-        android:id="@+id/btnTeacher"
+        android:id="@+id/button_Teacher"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
         android:text="Teacher"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -34,25 +37,31 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <Button
-        android:id="@+id/btnStudent"
+        android:id="@+id/button_Student"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
         android:text="Student"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnTeacher"
-        app:layout_constraintStart_toStartOf="@+id/btnTeacher"
-        app:layout_constraintTop_toBottomOf="@+id/btnTeacher"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintEnd_toEndOf="@+id/button_Teacher"
+        app:layout_constraintStart_toStartOf="@+id/button_Teacher"
+        app:layout_constraintTop_toBottomOf="@+id/button_Teacher"
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login as"
+        android:text="LOGIN AS"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_AppLogo"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView_AppLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_AppLogo"
         app:layout_constraintVertical_bias="0.1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
