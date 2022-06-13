@@ -7,35 +7,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PreLoginActivity extends AppCompatActivity {
-
+public class PreLoginActivity extends AppCompatActivity
+{
     Button Teacher_button, Student_button;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_login);
 
         Teacher_button = findViewById(R.id.button_Teacher);
         Student_button = findViewById(R.id.button_Student);
 
-        Teacher_button.setOnClickListener(new View.OnClickListener() {
+        Teacher_button.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Intent teacher = new Intent(getApplicationContext(), TeacherLoginActivity.class);
-
-                startActivity(teacher);
+            public void onClick(View view)
+            {
+                Intent Teacher = new Intent(getApplicationContext(), TeacherLoginActivity.class);
+                startActivity(Teacher);
             }
         });
 
-        Student_button.setOnClickListener(new View.OnClickListener() {
+        Student_button.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Intent student = new Intent(getApplicationContext(), StudentLoginActivity.class);
-
-                startActivity(student);
+            public void onClick(View view)
+            {
+                Intent Student = new Intent(getApplicationContext(), StudentLoginActivity.class);
+                startActivity(Student);
             }
         });
-
     }
 }

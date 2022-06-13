@@ -20,10 +20,23 @@
         app:layout_constraintVertical_bias="0.1"
         app:srcCompat="@drawable/teacher_logo" />
 
+    <TextView
+        android:id="@+id/textView_TeacherID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teacher ID"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_TeacherLogo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView_TeacherLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_TeacherLogo"
+        app:layout_constraintVertical_bias="0.10" />
+
     <EditText
         android:id="@+id/editText_TeacherID"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/textview_background"
         android:drawableLeft="@drawable/ic_baseline_account_circle_24"
         android:drawablePadding="10dp"
@@ -40,10 +53,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_TeacherID"
         app:layout_constraintVertical_bias="0.052" />
 
+    <TextView
+        android:id="@+id/textView_TeacherPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_TeacherID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_TeacherID"
+        app:layout_constraintTop_toBottomOf="@+id/editText_TeacherID"
+        app:layout_constraintVertical_bias="0.1" />
+
     <EditText
         android:id="@+id/editText_TeacherPassword"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/textview_background"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="10dp"
@@ -59,32 +85,6 @@
         app:layout_constraintStart_toStartOf="@+id/editText_TeacherID"
         app:layout_constraintTop_toBottomOf="@+id/textView_TeacherPassword"
         app:layout_constraintVertical_bias="0.05" />
-
-    <TextView
-        android:id="@+id/textView_TeacherID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Teacher ID"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_TeacherLogo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView_TeacherLogo"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_TeacherLogo"
-        app:layout_constraintVertical_bias="0.10" />
-
-    <TextView
-        android:id="@+id/textView_TeacherPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView_TeacherID"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView_TeacherID"
-        app:layout_constraintTop_toBottomOf="@+id/editText_TeacherID"
-        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/button_TeacherLogin"

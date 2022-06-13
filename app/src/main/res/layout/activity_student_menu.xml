@@ -8,7 +8,7 @@
     tools:context=".StudentMenuActivity">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView_StudentMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="STUDENT MENU"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView_IqraIconStudent"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,8 +33,20 @@
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/iqra_logo" />
 
+    <TextView
+        android:id="@+id/textView_IqraStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iqra'"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_IqraIconStudent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView_IqraIconStudent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_IqraIconStudent" />
+
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView_ReportsIconStudent"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,30 +58,18 @@
         app:srcCompat="@drawable/report_logo" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iqra'"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView_ReportsStudent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reports"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView_ReportsIconStudent"
+        app:layout_constraintStart_toStartOf="@+id/imageView_ReportsIconStudent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_ReportsIconStudent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView_LogoutStudent"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
