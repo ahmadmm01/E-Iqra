@@ -10,13 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EIqra">
         <activity
-            android:name=".StudentLoginActivity"
-            android:parentActivityName=".PreLoginActivity"
+            android:name=".StudentMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".TeacherLoginActivity"
-            android:parentActivityName=".PreLoginActivity"
+            android:name=".TeacherMenuActivity"
             android:exported="false" />
+        <activity
+            android:name=".StudentLoginActivity"
+            android:exported="false"
+            android:parentActivityName=".PreLoginActivity" />
+        <activity
+            android:name=".TeacherLoginActivity"
+            android:exported="false"
+            android:parentActivityName=".PreLoginActivity" />
         <activity
             android:name=".PreLoginActivity"
             android:exported="true">

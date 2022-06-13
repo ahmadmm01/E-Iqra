@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c4c4c4"
+    android:background="@color/lightgray"
     tools:context=".StudentLoginActivity">
 
     <ImageView
@@ -89,6 +89,7 @@
         android:id="@+id/button_StudentLogin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
         android:text="Login"
         android:textColor="@color/white"
         app:cornerRadius="10dp"
