@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context=".ReportsManageActivity">
+
+    <EditText
+        android:id="@+id/editText_ReportsIqraValue"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Iqra Value"
+        android:inputType="textPassword"
+        android:paddingLeft="10sp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ReportsStudentsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_ReportsStudentsName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportsIqraValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_ReportsIqraValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iqra Value"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_ReportsStudentsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_ReportsStudentsName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ReportsId"
+        app:layout_constraintVertical_bias="0.625" />
+
+    <TextView
+        android:id="@+id/textView_ReportsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports ID"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ReportsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_ReportsId"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Reports"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/editText_ReportsId"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Reports ID"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportsId"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/textView_ReportsStudentsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students Name"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_ReportsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_ReportsId"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ReportsId"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <EditText
+        android:id="@+id/editText_ReportsStudentsName"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Students Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ReportsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_ReportsId"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportsStudentsName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_ReportsIqraId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iqra ID"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_ReportsStudentsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_ReportsStudentsName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ReportsId"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <Button
+        android:id="@+id/button_SaveReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ReportsIqraId"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_ReportsIqraId"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ReportsIqraValue"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <EditText
+        android:id="@+id/editText_ReportsIqraId"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Iqra ID"
+        android:inputType="textPassword"
+        android:paddingLeft="10sp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ReportsStudentsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_ReportsStudentsName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportsIqraId"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_ReportsStudentsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students ID"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_ReportsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_ReportsId"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ReportsId"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <EditText
+        android:id="@+id/editText_ReportsStudentsId"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Students ID"
+        android:inputType="textPersonName"
+        android:paddingLeft="10sp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_ReportsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_ReportsId"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ReportsStudentsId"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

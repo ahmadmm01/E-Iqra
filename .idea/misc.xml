@@ -8,10 +8,18 @@
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.328" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.328" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_pre_login.xml" value="0.33" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_reports_manage.xml" value="0.3067708333333333" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_student_login.xml" value="0.33" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_student_menu.xml" value="0.33" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_student_reports_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_student_students_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_students_manage.xml" value="0.33" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_teacher_login.xml" value="0.33" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_teacher_menu.xml" value="0.33" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_teacher_reports_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/activity_teacher_students_menu.xml" value="0.33" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/row_reports.xml" value="0.3067708333333333" />
+        <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/row_students.xml" value="0.33" />
         <entry key="..\:/Users/MADD/AndroidStudioProjects/EIqra/app/src/main/res/layout/row_user.xml" value="0.36666666666666664" />
       </map>
     </option>

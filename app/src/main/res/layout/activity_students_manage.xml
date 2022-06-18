@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context=".StudentsManageActivity">
+
+    <TextView
+        android:id="@+id/textView_StudentsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students ID"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_StudentsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_StudentsId"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Reports"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <EditText
+        android:id="@+id/editText_StudentsId"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Students ID"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_StudentsId"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students Member"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/textView_StudentsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students Name"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_StudentsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_StudentsId"
+        app:layout_constraintTop_toBottomOf="@+id/editText_StudentsId"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <EditText
+        android:id="@+id/editText_StudentsName"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Students Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_StudentsId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_StudentsId"
+        app:layout_constraintTop_toBottomOf="@+id/textView_StudentsName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_StudentsPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students Password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_StudentsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_StudentsName"
+        app:layout_constraintTop_toBottomOf="@+id/editText_StudentsId"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <Button
+        android:id="@+id/button_SaveStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_StudentsPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_StudentsPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editText_StudentsPassword"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <EditText
+        android:id="@+id/editText_StudentsPassword"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/textview_background"
+        android:ems="10"
+        android:hint="Students Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_StudentsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_StudentsName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_StudentsPassword"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

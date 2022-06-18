@@ -1,22 +1,36 @@
 package com.pam.e_iqra.model;
 
+import android.content.Context;
+
+import java.util.List;
+
 public class User
 {
-    private String tid, tpass, sid, spass;
+    private String tid, tpass, sid, spass, sname;
+    private Context context;
+    private List<User> list;
 
     public User()
     {
 
     }
 
-    public User(String tid, String tpass, String sid, String spass)
+    public User(String sid, String sname)
+    {
+        this.sid = sid;
+        this.sname = sname;
+    }
+
+    public User(String tid, String tpass, String sid, String spass, String sname)
     {
         this.tid = tid;
         this.tpass = tpass;
         this.sid = sid;
         this.spass = spass;
-
+        this.sname = sname;
     }
+
+
 
     public String getTid()
     {
@@ -55,5 +69,15 @@ public class User
     public void setSpass(String spass)
     {
         this.spass = spass;
+    }
+
+    public String getSname()
+    {
+        return sname;
+    }
+
+    public void setSname(String sname)
+    {
+        this.sname = sname;
     }
 }
