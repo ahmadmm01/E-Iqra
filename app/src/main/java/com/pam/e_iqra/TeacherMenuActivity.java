@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class TeacherMenuActivity extends AppCompatActivity
 {
-    ImageView LogoutTeacher_imageView;
+    ImageView LogoutTeacher_imageView, StudentsIconTeacher_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -18,6 +18,7 @@ public class TeacherMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_teacher_menu);
 
         LogoutTeacher_imageView = findViewById(R.id.imageView_LogoutTeacher);
+        StudentsIconTeacher_imageView = findViewById(R.id.imageView_StudentsIconTeacher);
 
         LogoutTeacher_imageView.setOnClickListener(new View.OnClickListener()
         {
@@ -26,6 +27,14 @@ public class TeacherMenuActivity extends AppCompatActivity
             {
                 Intent LogoutTeacher = new Intent(getApplicationContext(), TeacherLoginActivity.class);
                 startActivity(LogoutTeacher);
+            }
+        });
+
+        StudentsIconTeacher_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent StudentsList = new Intent(getApplicationContext(), TeacherStudentsMenuActivity.class);
+                startActivity(StudentsList);
             }
         });
     }

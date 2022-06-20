@@ -2,38 +2,32 @@ package com.pam.e_iqra;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.pam.e_iqra.adapter.UserAdapter;
+import com.pam.e_iqra.ViewHolder.StudentsViewHolder;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.pam.e_iqra.model.User;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class TeacherStudentsMenuActivity extends AppCompatActivity
 {
-    private RecyclerView recyclerView;
     private FloatingActionButton TeacherStudentsAdd_button;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private List<User> list = new ArrayList<>();
-    private UserAdapter userAdapter;
-    private ProgressDialog progressDialog;
+    private DatabaseReference ProductRef;
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -42,100 +36,61 @@ public class TeacherStudentsMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_teacher_students_menu);
 
         recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        ProductRef = FirebaseDatabase.getInstance().getReference().child("User").child("Student");
         TeacherStudentsAdd_button = findViewById(R.id.button_TeacherStudentsAdd);
 
-        progressDialog = new ProgressDialog(getApplicationContext());
-        progressDialog.setTitle("Loading");
-        progressDialog.setMessage("Take the Data...");
-        userAdapter = new UserAdapter(getApplicationContext(), list);
-
-        userAdapter.setDialog(new UserAdapter.Dialog()
+        TeacherStudentsAdd_button.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(int pos)
+            public void onClick(View view)
             {
-                final CharSequence[] dialogItem = {"Edit", "Delete"};
-                AlertDialog.Builder dialog = new AlertDialog.Builder(getApplicationContext());
-                dialog.setItems(dialogItem, new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i)
-                    {
-                        switch (i)
-                        {
-                            case 0:
-                                Intent intent = new Intent(getApplicationContext(), TeacherMenuActivity.class);
-                                intent.putExtra("id", list.get(pos).getSid());
-                                startActivity(intent);
-                                break;
-                            case 1:
-                                deleteData(list.get(pos).getSid());
-                                break;
-                        }
-                    }
-                });
-                dialog.show();
+                Intent intent = new Intent (getApplicationContext(), StudentsManageActivity.class);
+                startActivity(intent);
             }
         });
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL,false);
-        RecyclerView.ItemDecoration decoration = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(decoration);
-        recyclerView.setAdapter(userAdapter);
+
     }
 
     @Override
     protected void onStart()
     {
         super.onStart();
-        getData();
-    }
 
-    private void getData()
-    {
-        progressDialog.show();
-
-        db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>()
+        FirebaseRecyclerOptions<User> options = new FirebaseRecyclerOptions.Builder<User>().setQuery(ProductRef, User.class).build();
+        FirebaseRecyclerAdapter<User, StudentsViewHolder> adapter = new FirebaseRecyclerAdapter<User, StudentsViewHolder>(options)
         {
-            @SuppressLint("NotifyDataSetChanged")
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task)
+            protected void onBindViewHolder(@NonNull StudentsViewHolder holder, int position, @NonNull final User model)
             {
-                list.clear();
-                if(task.isSuccessful())
+                holder.txtStudentsId.setText(model.getSid());
+                holder.txtStudentsName.setText(model.getSname());
+
+                holder.itemView.setOnClickListener(new View.OnClickListener()
                 {
-                    for (QueryDocumentSnapshot document : task.getResult())
+                    @Override
+                    public void onClick(View v)
                     {
-                        User user = new User(document.getString("sid"), document.getString("sname"));
-                        user.setSid(document.getId());
-                        list.add(user);
+                        Intent intent = new Intent(getApplicationContext(), StudentsManageActivity.class);
+                        intent.putExtra("Sid", model.getSid());
+                        startActivity(intent);
                     }
-                    userAdapter.notifyDataSetChanged();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "Failed to take Data!", Toast.LENGTH_SHORT).show();
-                }
-                progressDialog.dismiss();
+                });
             }
-        });
+            @NonNull
+            @Override
+            public StudentsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewtype)
+            {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_students, parent,false);
+                StudentsViewHolder holder = new StudentsViewHolder(view);
+                return holder;
+            }
+        };
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
     }
 
-    private void deleteData(String id)
-    {
-        progressDialog.show();
-        db.collection("users").document(id).delete().addOnCompleteListener(new OnCompleteListener<Void>()
-        {
-            @Override
-            public void onComplete(@NonNull Task<Void> task)
-            {
-                if(!task.isSuccessful())
-                {
-                    Toast.makeText(getApplicationContext(), "Failed to Delete Data!", Toast.LENGTH_SHORT).show();
-                }
-                progressDialog.dismiss();
-                getData();
-            }
-        });
-    }
 }

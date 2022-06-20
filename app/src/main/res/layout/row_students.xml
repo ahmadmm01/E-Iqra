@@ -2,20 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:divider="@color/gray"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:showDividers="end">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/row_StudentsId"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="ID" />
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="ID"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/row_StudentsName"
-        android:text="Name"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/black" />
 
 </LinearLayout>

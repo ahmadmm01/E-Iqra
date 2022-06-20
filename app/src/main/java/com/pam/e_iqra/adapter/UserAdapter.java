@@ -14,7 +14,7 @@ import com.pam.e_iqra.model.User;
 
 import java.util.List;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder>
+class UserAdapterr extends RecyclerView.Adapter<UserAdapterr.MyViewHolder>
 {
     private Context context;
     private List<User> list;
@@ -28,7 +28,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder>
     {
         this.dialog = dialog;
     }
-    public UserAdapter(Context context, List<User> list)
+    public UserAdapterr(Context context, List<User> list)
     {
         this.context = context;
         this.list = list;

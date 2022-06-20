@@ -7,8 +7,6 @@ import java.util.List;
 public class User
 {
     private String tid, tpass, sid, spass, sname;
-    private Context context;
-    private List<User> list;
 
     public User()
     {
