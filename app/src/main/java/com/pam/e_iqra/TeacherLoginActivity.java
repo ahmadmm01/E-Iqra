@@ -91,20 +91,20 @@ public class TeacherLoginActivity extends AppCompatActivity
                         {
                             loadBar.dismiss();
                             Toast.makeText(getApplicationContext(), "Login succesfully!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), TeacherMenuActivity.class);
+                            Intent intent = new Intent(TeacherLoginActivity.this, TeacherMenuActivity.class);
                             startActivity(intent);
                         }
                         else
                         {
                             loadBar.dismiss();
-                            Toast.makeText(getApplicationContext(), "Password is incorrect!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(TeacherLoginActivity.this, "Password is incorrect!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else
                 {
                     loadBar.dismiss();
-                    Toast.makeText(getApplicationContext(), "Teacher with ID " + tid + " does not exist", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TeacherLoginActivity.this, "Teacher with ID " + tid + " does not exist", Toast.LENGTH_SHORT).show();
                 }
             }
 

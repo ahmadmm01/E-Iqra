@@ -11,6 +11,7 @@
         android:theme="@style/Theme.EIqra" >
         <activity
             android:name=".StudentReportsMenuActivity"
+            android:parentActivityName=".StudentMenuActivity"
             android:exported="false" />
         <activity
             android:name=".TeacherReportsMenuActivity"

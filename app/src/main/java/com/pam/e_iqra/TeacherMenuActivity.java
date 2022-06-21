@@ -26,7 +26,7 @@ public class TeacherMenuActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent LogoutTeacher = new Intent(getApplicationContext(), TeacherLoginActivity.class);
+                Intent LogoutTeacher = new Intent(TeacherMenuActivity.this, TeacherLoginActivity.class);
                 startActivity(LogoutTeacher);
             }
         });
@@ -36,7 +36,7 @@ public class TeacherMenuActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent StudentsList = new Intent(getApplicationContext(), TeacherStudentsMenuActivity.class);
+                Intent StudentsList = new Intent(TeacherMenuActivity.this, TeacherStudentsMenuActivity.class);
                 startActivity(StudentsList);
             }
         });
@@ -46,7 +46,7 @@ public class TeacherMenuActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent ReportsList = new Intent(getApplicationContext(), TeacherReportsMenuActivity.class);
+                Intent ReportsList = new Intent(TeacherMenuActivity.this, TeacherReportsMenuActivity.class);
                 startActivity(ReportsList);
             }
         });

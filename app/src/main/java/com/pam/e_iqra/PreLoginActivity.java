@@ -25,7 +25,7 @@ public class PreLoginActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent Teacher = new Intent(getApplicationContext(), TeacherLoginActivity.class);
+                Intent Teacher = new Intent(PreLoginActivity.this, TeacherLoginActivity.class);
                 startActivity(Teacher);
             }
         });
@@ -35,7 +35,7 @@ public class PreLoginActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent Student = new Intent(getApplicationContext(), StudentLoginActivity.class);
+                Intent Student = new Intent(PreLoginActivity.this, StudentLoginActivity.class);
                 startActivity(Student);
             }
         });

@@ -27,7 +27,6 @@ public class ReportsManageActivity extends AppCompatActivity
     private EditText ReportsReportsId_editText, ReportsStudentsId_editText, ReportsIqraId_editText, ReportsIqraValue_editText;
     private Button SaveReports_button;
     private ProgressDialog loadingBar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,7 +39,15 @@ public class ReportsManageActivity extends AppCompatActivity
         ReportsIqraValue_editText = findViewById(R.id.editText_ReportsIqraValue);
         SaveReports_button = findViewById(R.id.button_SaveReports);
 
-        loadingBar = new ProgressDialog(this);
+        Intent intent = getIntent();
+        if (intent!=null)
+        {
+            ReportsReportsId_editText.setText(intent.getStringExtra("rid"));
+            ReportsStudentsId_editText.setText(intent.getStringExtra("sid"));
+            ReportsIqraId_editText.setText(intent.getStringExtra("iid"));
+            ReportsIqraValue_editText.setText(intent.getStringExtra("ivalue"));
+        }
+        loadingBar = new ProgressDialog(ReportsManageActivity.this);
 
         SaveReports_button.setOnClickListener(new View.OnClickListener()
         {
@@ -50,6 +57,8 @@ public class ReportsManageActivity extends AppCompatActivity
                 saveData();
             }
         });
+
+
     }
 
     private void saveData()
@@ -125,12 +134,38 @@ public class ReportsManageActivity extends AppCompatActivity
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), "this "+ rid + " already exist", Toast.LENGTH_SHORT).show();
-                    loadingBar.dismiss();
-                    Toast.makeText(getApplicationContext(), "please try again using another id", Toast.LENGTH_SHORT).show();
+                    HashMap<String, Object> UserDataMap = new HashMap<>();
 
-                    Intent intent = new Intent(getApplicationContext(), TeacherReportsMenuActivity.class);
-                    startActivity(intent);
+                    UserDataMap.put("sid", sid);
+                    UserDataMap.put("iid", iid);
+                    UserDataMap.put("ivalue", ivalue);
+
+                    db.child("Report").child(rid).updateChildren(UserDataMap).addOnCompleteListener(new OnCompleteListener<Void>()
+                    {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task)
+                        {
+                            if(task.isSuccessful())
+                            {
+                                Toast.makeText(getApplicationContext(), "Congratulation data has been created.", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                                Intent intent = new Intent(getApplicationContext(), TeacherStudentsMenuActivity.class);
+                                startActivity(intent);
+                            }
+                            else
+                            {
+                                loadingBar.dismiss();
+                                Toast.makeText(getApplicationContext(), "Network error, please try again after some time..", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+//                    Toast.makeText(getApplicationContext(), "this "+ rid + " already exist", Toast.LENGTH_SHORT).show();
+//                    loadingBar.dismiss();
+//                    Toast.makeText(getApplicationContext(), "please try again using another id", Toast.LENGTH_SHORT).show();
+//
+//                    Intent intent = new Intent(getApplicationContext(), TeacherReportsMenuActivity.class);
+//                    startActivity(intent);
                 }
             }
 

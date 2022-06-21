@@ -21,7 +21,8 @@ import com.pam.e_iqra.model.User;
 
 public class StudentLoginActivity extends AppCompatActivity
 {
-    private String Student_ID, Student_Password;
+    public static String Student_ID;
+    public String Student_Password;
     private EditText StudentID_editText, StudentPassword_editText;
     private Button StudentLogin_button;
     private String ParentDbName = "User";
@@ -44,12 +45,13 @@ public class StudentLoginActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+
                 loginUser();
             }
         });
     }
 
-    private void loginUser()
+    public void loginUser()
     {
         Student_ID = StudentID_editText.getText().toString();
         Student_Password = StudentPassword_editText.getText().toString();
@@ -90,8 +92,9 @@ public class StudentLoginActivity extends AppCompatActivity
                         if (UserData.getSpass().equals(spass))
                         {
                             loadBar.dismiss();
-                            Toast.makeText(getApplicationContext(), "Login succesfully!", Toast.LENGTH_SHORT).show();
+
                             Intent intent = new Intent(getApplicationContext(), StudentMenuActivity.class);
+
                             startActivity(intent);
                         }
                         else

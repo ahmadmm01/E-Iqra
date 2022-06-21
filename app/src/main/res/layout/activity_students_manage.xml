@@ -93,8 +93,8 @@
         app:layout_constraintEnd_toEndOf="@+id/textView_StudentsName"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_StudentsName"
-        app:layout_constraintTop_toBottomOf="@+id/editText_StudentsId"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_StudentsName"
+        app:layout_constraintVertical_bias="0.025" />
 
     <Button
         android:id="@+id/button_SaveStudents"
