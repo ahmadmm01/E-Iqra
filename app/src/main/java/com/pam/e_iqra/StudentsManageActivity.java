@@ -40,7 +40,6 @@ public class StudentsManageActivity extends AppCompatActivity
         StudentsPassword_editText = findViewById(R.id.editText_StudentsPassword);
         SaveStudents_button = findViewById(R.id.button_SaveStudents);
 
-
         loadingBar = new ProgressDialog(this);
 
         SaveStudents_button.setOnClickListener(new View.OnClickListener()

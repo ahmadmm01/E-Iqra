@@ -13,6 +13,12 @@ public class User
 
     }
 
+    public User(String sid, String sname)
+    {
+        this.sid = sid;
+        this.sname = sname;
+    }
+
     public User(String tid, String tpass, String sid, String spass, String sname)
     {
         this.tid = tid;
