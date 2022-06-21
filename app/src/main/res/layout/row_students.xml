@@ -8,18 +8,18 @@
     android:showDividers="end">
 
     <TextView
-        android:id="@+id/row_StudentsId"
+        android:id="@+id/row_StudentsStudentsId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
+        android:text="Students ID"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/row_StudentsName"
+        android:id="@+id/row_StudentsStudentsName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Students Name"
         android:textColor="@color/black" />
 
 </LinearLayout>

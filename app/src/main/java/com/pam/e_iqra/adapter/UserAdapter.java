@@ -60,8 +60,8 @@ class UserAdapterr extends RecyclerView.Adapter<UserAdapterr.MyViewHolder>
         public MyViewHolder(@NonNull View itemView)
         {
             super(itemView);
-            id = itemView.findViewById(R.id.row_StudentsId);
-            name = itemView.findViewById(R.id.row_StudentsName);
+            id = itemView.findViewById(R.id.row_StudentsStudentsId);
+            name = itemView.findViewById(R.id.row_StudentsStudentsName);
             itemView.setOnClickListener(new View.OnClickListener()
             {
                 @Override

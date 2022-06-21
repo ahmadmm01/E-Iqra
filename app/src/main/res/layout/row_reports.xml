@@ -2,36 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:divider="@color/black"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:showDividers="end">
 
     <TextView
+        android:id="@+id/row_ReportsReportsId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/row_ReportsId"
+        android:text="Reports ID"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Reports ID" />
+        android:textStyle="bold" />
+
     <TextView
+        android:id="@+id/row_ReportsStudentsId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/row_StudentsId"
-        android:text="Students ID"/>
+        android:text="Students ID"
+        android:textColor="@color/black" />
+
     <TextView
+        android:id="@+id/row_ReportsIqraId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/row_StudentsName"
-        android:text="Students Name"/>
+        android:text="Iqra ID"
+        android:textColor="@color/black" />
+
     <TextView
+        android:id="@+id/row_ReportsIqraValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/row_IqraId"
-        android:text="Iqra ID"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/row_IqraValue"
-        android:text="Iqra Value"/>
+        android:text="Iqra Value"
+        android:textColor="@color/black" />
 
 
 </LinearLayout>

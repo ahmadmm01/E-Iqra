@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,7 +23,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 public class TeacherStudentsMenuActivity extends AppCompatActivity
 {
     private FloatingActionButton TeacherStudentsAdd_button;
-    private DatabaseReference ProductRef;
+    private DatabaseReference StudentsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
@@ -40,7 +39,7 @@ public class TeacherStudentsMenuActivity extends AppCompatActivity
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        ProductRef = FirebaseDatabase.getInstance().getReference().child("User").child("Student");
+        StudentsRef = FirebaseDatabase.getInstance().getReference().child("User").child("Student");
         TeacherStudentsAdd_button = findViewById(R.id.button_TeacherStudentsAdd);
 
         TeacherStudentsAdd_button.setOnClickListener(new View.OnClickListener()
@@ -60,7 +59,7 @@ public class TeacherStudentsMenuActivity extends AppCompatActivity
     {
         super.onStart();
 
-        FirebaseRecyclerOptions<User> options = new FirebaseRecyclerOptions.Builder<User>().setQuery(ProductRef, User.class).build();
+        FirebaseRecyclerOptions<User> options = new FirebaseRecyclerOptions.Builder<User>().setQuery(StudentsRef, User.class).build();
         FirebaseRecyclerAdapter<User, StudentsViewHolder> adapter = new FirebaseRecyclerAdapter<User, StudentsViewHolder>(options)
         {
             @Override
@@ -75,11 +74,12 @@ public class TeacherStudentsMenuActivity extends AppCompatActivity
                     public void onClick(View v)
                     {
                         Intent intent = new Intent(getApplicationContext(), StudentsManageActivity.class);
-                        intent.putExtra("Sid", model.getSid());
+                        intent.putExtra("sid", model.getSid());
                         startActivity(intent);
                     }
                 });
             }
+
             @NonNull
             @Override
             public StudentsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewtype)
@@ -92,5 +92,4 @@ public class TeacherStudentsMenuActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
-
 }

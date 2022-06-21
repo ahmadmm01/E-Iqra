@@ -16,13 +16,16 @@ public class StudentsViewHolder extends RecyclerView.ViewHolder implements View.
     public StudentsViewHolder(@NonNull View itemView)
     {
         super(itemView);
-        txtStudentsId = (TextView) itemView.findViewById(R.id.row_StudentsId);
-        txtStudentsName = (TextView) itemView.findViewById(R.id.row_StudentsName);
+
+        txtStudentsId = (TextView) itemView.findViewById(R.id.row_StudentsStudentsId);
+        txtStudentsName = (TextView) itemView.findViewById(R.id.row_StudentsStudentsName);
     }
+
     public void setItemClickListener(ItemClickListener listener)
     {
         this.listener = listener;
     }
+
     @Override
     public void onClick(View v)
     {
